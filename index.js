@@ -1,7 +1,7 @@
 // code away!
+
 const server = require('./server');
 
-const port = 8000;
-server.listen({ port }, () => {
-    console.log(`\n** API Ruuning on ${port} **\n`)
-})
+const port = 6000;
+server.listen(6000, () => 
+    console.log(`\n** API Ruuning on ${port} **\n`))
