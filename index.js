@@ -1,7 +1,9 @@
 // code away!
 
 const server = require('./server');
+const defaults = require('./config/defaults');
 
-const port = 6000;
-server.listen(6000, () => 
-    console.log(`\n** API Ruuning on ${port} **\n`))
+// const port = 6000;
+
+server.listen(defaults.port, () => 
+    console.log(`\n** API Ruuning on ${defaults.port} **\n`))
