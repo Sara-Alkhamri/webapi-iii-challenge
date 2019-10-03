@@ -1,6 +1,8 @@
 // code away!
-
+require('dotenv').config()
 const server = require('./server');
+
+
 const defaults = require('./config/defaults');
 
 // const port = 6000;

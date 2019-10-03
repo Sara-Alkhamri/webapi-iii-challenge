@@ -1,12 +1,19 @@
 const express = require('express');
+const helmet = require('helmet')
+
+const secrets = require('./config/secrets')
+
+console.log('environment:', secrets.environment)
+
+const userRouter = require('./users/userRouter')
 
 const server = express();
 
+server.use(helmet())
 server.use(express.json());
 server.use(logger);
 
-//routers
-const userRouter = require('./users/userRouter')
+
 server.use('/api/users', userRouter);
 
 server.get('/', (req, res) => {
